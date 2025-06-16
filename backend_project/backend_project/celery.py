@@ -4,7 +4,7 @@ from celery import Celery
 from dotenv import load_dotenv
 
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '.env'))
-print("✅ Loading .env from:", os.path.join(os.path.dirname(__file__), '.env'))
+print("Loading .env from:", os.path.join(os.path.dirname(__file__), '.env'))
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend_project.backend_project.settings')
 
