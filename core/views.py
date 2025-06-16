@@ -1,13 +1,13 @@
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
-from core.tasks import send_alert  # ✅ Add this import
+from core.tasks import send_alert
 from django.http import JsonResponse
 
 @api_view(['GET'])
 @permission_classes([AllowAny])
 def public_view(request):
-    send_alert.delay("🚀 Someone just accessed the public view!")
+    send_alert.delay("Someone accessed the public view!")
     return Response({"message": "This is a public endpoint. No login needed."})
 
 @api_view(['GET'])

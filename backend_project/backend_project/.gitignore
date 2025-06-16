@@ -1,23 +1,17 @@
-# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
 *.log
 
-# Django SQLite database
 *.sqlite3
 db.sqlite3
 
-# Environment variables file
 .env
 
-# Virtual environment
 env/
 
-# VS Code settings (optional, good if you're using VS Code)
 .vscode/
 
-# OS-specific
 .DS_Store
 Thumbs.db

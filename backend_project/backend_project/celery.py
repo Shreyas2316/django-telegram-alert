@@ -3,11 +3,9 @@ import os
 from celery import Celery
 from dotenv import load_dotenv
 
-# Load environment variables
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '.env'))
 print("✅ Loading .env from:", os.path.join(os.path.dirname(__file__), '.env'))
 
-# Set default Django settings
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend_project.backend_project.settings')
 
 
