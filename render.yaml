@@ -8,11 +8,11 @@ services:
       - key: DEBUG
         value: False
       - key: SECRET_KEY
-        value: your-secret-key-here
+        value: 23483m4i+o88yz&_qozr=ks353rzfa^e&4&ym(o!oi##vs@b4k
       - key: TELEGRAM_TOKEN
-        value: your-telegram-bot-token
+        value: 866305374:AAHojs8wxQZyUY4Syb0gvbUIwPvHMbmys9U
       - key: TELEGRAM_CHAT_ID
-        value: your-chat-id
+        value: 1101300918
     autoDeploy: true
 
   - type: worker
@@ -24,10 +24,20 @@ services:
       - key: DEBUG
         value: False
       - key: SECRET_KEY
-        value: your-secret-key-here
+        value: 23483m4i+o88yz&_qozr=ks353rzfa^e&4&ym(o!oi##vs@b4k
       - key: TELEGRAM_TOKEN
-        value: your-telegram-bot-token
+        value: 866305374:AAHojs8wxQZyUY4Syb0gvbUIwPvHMbmys9U
       - key: TELEGRAM_CHAT_ID
-        value: your-chat-id
+        value: 1101300918
       - key: REDIS_URL
-        value: redis://default:<password>@<host>:<port>
+        value: redis://default:tgQAIqUwV5KXODLFCwQkPa4FZepdShPL@redis-12326.c62.us-east-1-4.ec2.redns.redis-cloud.com:12326
+
+
+  - type: worker
+    name: telegram-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: 866305374:AAHojs8wxQZyUY4Syb0gvbUIwPvHMbmys9U
