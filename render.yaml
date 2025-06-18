@@ -19,7 +19,7 @@ services:
     name: celery-worker
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: celery -A backend_project worker --loglevel=info --pool=solo
+    startCommand: celery -A backend_project.backend_project worker --loglevel=info --pool=solo
     envVars:
       - key: DEBUG
         value: False
@@ -31,3 +31,12 @@ services:
         value: your-chat-id
       - key: REDIS_URL
         value: redis://localhost:6379/0
+
+  - type: worker
+    name: telegram-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: your-telegram-bot-token
