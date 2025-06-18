@@ -2,3 +2,4 @@ python-telegram-bot
 duckduckgo-search
 python-dotenv
 requests
+gunicorn
