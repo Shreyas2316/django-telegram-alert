@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.log
+
+# Env
+env/
+venv/
+ENV/
+.venv/
+.env
+.env.local
+*.env
+
+# IDE/editor
+.vscode/
+.idea/
+
+# Mac & system files
+.DS_Store
+Thumbs.db
+
+# Django
+db.sqlite3
+staticfiles/
+media/
+
+# Redis cache (optional)
+celerybeat-schedule
